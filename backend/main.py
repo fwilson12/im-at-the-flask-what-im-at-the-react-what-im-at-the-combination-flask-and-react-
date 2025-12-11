@@ -60,7 +60,7 @@ def update_contact(user_id): # match function parameter w/ path endpoint paramet
     return jsonify({'message': 'User updated'}), 200
 
 
-@app.route("/delete_contact/<int:user_id", methods=["DELETE"])
+@app.route("/delete_contact/<int:user_id>", methods=["DELETE"])
 def delete_contact(user_id):
     # get db entry (python object) corresponding to the user id provided 
     contact = Contact.query.get(user_id)
